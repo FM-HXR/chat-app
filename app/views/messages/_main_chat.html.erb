@@ -1,13 +1,46 @@
 <div class="container chat">
 
   <div class="top mc">
+    <div class="room-name">
+    <%# room name var erb to replace <p> %>
+      <p>techroom1</p>
+    </div>
+    <div class="end-chat">
+      <%= link_to 'チャットを終了する', "" %>
+    </div>
   </div>
 
   <div class="mc2">
-    
+    <%# user, date, text %>
+    <%# each loop for every content on table by users %>
+    <%# params val var erb for name, time, text %>
+    <div class="chat-content">
+      <div class="name-time">
+        <p class="name">123456789#</p>
+        <p class="time">YYYY/MM/DD (Day) HH:MM:SS</p>
+      </div>
+      <p class="text">Sup</p>
+    </div>
+
+    <%# this is a shell (remove later) %>
+    <div class="chat-content">
+      <div class="name-time">
+        <p class="name">123456789#</p>
+        <p class="time">YYYY/MM/DD (Day) HH:MM:SS</p>
+      </div>
+      <p class="text">Feels Good Man</p>
+    </div>
   </div>
 
   <div class="bottom-mc">
+    <div class="form">
+      <input class="text-form" placeholder= "type a message">
+      <label class="upload-image">
+        <span class="image">画像</span>
+        <input type="file" class="hidden">
+      </label>
+    </div>
+    <input class="submit-form" type="submit" value="送信">
   </div>
 
 </div>
