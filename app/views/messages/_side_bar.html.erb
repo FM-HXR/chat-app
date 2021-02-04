@@ -2,6 +2,7 @@
 
   <div class="top sb">
   <%# nickname = 10 characters max %>
+  <%# nickname var erb to replace <p> %>
     <div class="nickname"><p>123456789#</p></div>
     <div class="new-chat">
       <%= link_to 'チャットを作成する', "" %>
@@ -9,6 +10,12 @@
   </div>
 
   <div class="sb2">
+    <div class="room-rows">
+      <%# each loop for every room id tied to user replaces <p>%>
+      <p class="room">techroom1</p>
+      <p class="room">techroom2</p>
+      <p class="room">techroom3</p>
+    </div>
   </div>
 
 </div>

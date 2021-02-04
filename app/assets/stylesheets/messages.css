@@ -64,6 +64,17 @@
   padding: 14px;
 }
 
+.room-rows{
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid white; */
+  margin-top: 20px;
+}
+
+.room {
+  color: white;
+  margin-bottom: 40px;
+}
 
 .mc {
   box-sizing: border-box;
