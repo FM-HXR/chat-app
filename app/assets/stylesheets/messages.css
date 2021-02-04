@@ -1,0 +1,97 @@
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.side-bar {
+  width: 300px;
+  height: auto;
+  background-color: #253141;
+}
+
+.main-chat{
+  width: calc(100% - 300px);
+  height: auto;
+  background-color: #fff;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* border: 3px dotted black; */
+}
+
+.top {
+  height: 100px;
+  width: auto;
+  /* border: 2px dotted lime; */
+}
+
+.sb {
+  box-sizing: border-box;
+  padding: 0 20px 0 20px; 
+  background-color: #253141;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nickname{
+  box-sizing: border-box;
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid #fafafa; */
+  font-size: 16px;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+}
+
+.new-chat {
+  width: 50%;
+}
+
+/* div.wrapper div.side-bar div.container.side div.top.sb  */
+.new-chat a {
+  color: deepskyblue;
+  text-decoration: none;
+  border: 1px solid lightblue;
+  font-size: 10px;
+  padding: 14px;
+}
+
+
+.mc {
+  box-sizing: border-box;
+  padding: 0 40px 0 40px; 
+  background-color: #ffffff;
+}
+
+.sb2 {
+  box-sizing: border-box;
+  padding: 0 20px 0 20px; 
+  height: calc(100% - 100px);
+  width: 100%;
+  background-color: #2F3E51;
+}
+
+.mc2 {
+  box-sizing: border-box;
+  padding: 46px 40px 0 40px; 
+  height: calc(100% - 190px);
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.bottom-mc {
+  box-sizing: border-box;
+  padding: 20px 40px 20px 40px; 
+  height: 90px;
+  width: 100%;
+  background-color: #dddddd;
+  /* border-top: 3px dotted red; */
+}
