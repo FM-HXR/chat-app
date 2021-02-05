@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.update(params.require(:user).permit(:name, :email, :password))
       redirect_to root_path
     else
-      render("users/edit")
+      render :edit
     end
   end
 
