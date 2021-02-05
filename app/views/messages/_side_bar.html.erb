@@ -3,7 +3,7 @@
   <div class="top sb">
   <%# nickname = 10 characters max %>
   <%# nickname var erb to replace <p> %>
-    <div class="nickname"><p>123456789#</p></div>
+    <div class="nickname"><%= link_to @user.name, "/users/#{@user.id}/edit" %></div>
     <div class="new-chat">
       <%= link_to 'チャットを作成する', "" %>
     </div>
@@ -15,6 +15,7 @@
       <p class="room">techroom1</p>
       <p class="room">techroom2</p>
       <p class="room">techroom3</p>
+      <%= link_to "logout(temp)", destroy_user_session_path, method: :delete %>
     </div>
   </div>
 
