@@ -3,7 +3,7 @@ z<div class='account-page' id='account-page'>
     <div class='account-page__inner--left account-page__header'>
       <h2>Edit Account</h2>
       <h5>アカウントの編集</h5>
-      <%= link_to "ログアウト", "#", class: 'btn'%>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
       <%= link_to "チャットページに戻る", :back, class: 'btn'%>
     </div>
     <div class='account-page__inner--right user-form'>
@@ -11,7 +11,7 @@ z<div class='account-page' id='account-page'>
         <div class="user-edit-error">
           <%= message %>
         </div>
-      <% end %>
+      <% end %> 
       <%= form_with model: current_user, local: true do |f|%>
         <div class='field'>
           <div class='field-label'>
