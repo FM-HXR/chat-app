@@ -29,6 +29,14 @@ z<div class='account-page' id='account-page'>
             <%= f.email_field :email%>
           </div>
         </div>
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :password%>
+          </div>
+          <div class='field-input'>
+            <%= f.password_field :password%>
+          </div>
+        </div>
         <div class='actions'>
           <%= f.submit "Update", class: 'btn'%>
         </div>
