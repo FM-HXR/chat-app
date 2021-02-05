@@ -1,5 +1,10 @@
 <div class='chat-room-form'>
   <h1>新規チャットルーム</h1>
+  
+  <% @room.errors.full_messages.each do |error| %>
+    <h1> <%= error %> </h1>
+  <% end %>
+  
   <%=form_with model: @room, local: true do |f|%>
     <div class='chat-room-form__field'>
       <div class='chat-room-form__field--left'>

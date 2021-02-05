@@ -1,4 +1,9 @@
 class RoomsController < ApplicationController
+  before_action :find_user
+  
+  def index
+  end
+
   def new
     @room= Room.new
   end

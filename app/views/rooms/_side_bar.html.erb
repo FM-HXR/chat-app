@@ -1,20 +1,22 @@
-<div class="container side">
+<div class="container-side">
 
   <div class="top sb">
   <%# nickname = 10 characters max %>
   <%# nickname var erb to replace <p> %>
     <div class="nickname"><%= link_to @user.name, "/users/#{@user.id}/edit" %></div>
     <div class="new-chat">
-      <%= link_to 'チャットを作成する', "" %>
+      <%= link_to 'チャットを作成する', new_room_path %>
     </div>
   </div>
 
   <div class="sb2">
     <div class="room-rows">
-      <%# each loop for every room id tied to user replaces <p>%>
-      <p class="room">techroom1</p>
-      <p class="room">techroom2</p>
-      <p class="room">techroom3</p>
+      <%# each loop for every room id tied to user has replaced placeholder <p>%>
+      <% current_user.rooms.each do |room| %>
+        <div class="room">
+         <%= link_to room.name, '#' %>
+        </div>
+      <% end %>
       <%= link_to "logout(temp)", destroy_user_session_path, method: :delete %>
     </div>
   </div>

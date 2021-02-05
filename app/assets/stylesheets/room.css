@@ -122,3 +122,31 @@ select {
   height: 80px;
   width: 100%;
 }
+
+/*---- index.html.erb -------------------*/
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.side-bar {
+  width: 300px;
+  height: auto;
+  background-color: #253141;
+}
+
+.main-chat{
+  width: calc(100% - 300px);
+  height: auto;
+  background-color: #fff;
+}
+
+.container-side {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* border: 3px dotted black; */
+}
