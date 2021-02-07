@@ -150,3 +150,7 @@ select {
   flex-direction: column;
   /* border: 3px dotted black; */
 }
+
+.field_with_errors {
+  display: contents;
+}

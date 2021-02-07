@@ -6,7 +6,7 @@
       <p><%=@room.name%></p>
     </div>
     <div class="end-chat">
-      <%= link_to 'チャットを終了する', "#", method: :delete %>
+      <%= link_to 'チャットを終了する', room_path(@room), method: :delete %>
     </div>
   </div>
 
