@@ -76,12 +76,25 @@
 
 .room {
   margin-bottom: 40px;
-  border-bottom: 1px dotted white;
+  border: 1px solid white;
+  border-radius: 10px;
+  background-color: rgba(68, 138, 160, 0.1)
 }
 
 .room a {
   color: white;
   text-decoration: none;
+  padding: 5px;
+}
+
+.room-name p {
+  font-size: 24px;
+}
+
+.user-names{
+  color: limegreen;
+  font-size: 12px;
+  padding: 3px;
 }
 
 .mc {
@@ -124,17 +137,24 @@
 }
 
 .chat-content {
+  color: #434a54;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.content{
   border: 2px solid lightblue;
   border-radius: 10px;
   border-style: groove;
-  color: #434a54;
-  font-size: 14px;
-  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 10px 0;
 }
 
 .name-time{
   display: flex;
-  margin: 10px 0 10px 0;
+  flex-direction: row;
+  padding-bottom: 5px;
 }
 
 .time{
@@ -154,12 +174,13 @@
 }
 
 .form {
-  width: 85%;
+  width: 100%;
   height: 50px;
   background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid black;
 }
 
 .text-form {
@@ -189,11 +210,12 @@
   display: none;
 }
 
-.submit-form {
+.submit-form input{
   height: 50px;
   border: none;
   background-color: #38AEF0;
   color: white;
   padding: 0 20px 0 20px;
   margin-left: 15px;
+  /* border: 1px solid black; */
 }

@@ -6,7 +6,11 @@ Rails.application.routes.draw do
   
   resources :users, only: [:edit, :update]
   resources :rooms do
-    resources :messages  
+    resources :messages do
+      collection do
+        get 'search'
+      end
+    end
   end
   
 end
