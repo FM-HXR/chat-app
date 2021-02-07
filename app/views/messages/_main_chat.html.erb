@@ -3,10 +3,10 @@
   <div class="top mc">
     <div class="room-name">
     <%# room name var erb to replace <p> %>
-      <p>techroom1</p>
+      <p><%=@room.name%></p>
     </div>
     <div class="end-chat">
-      <%= link_to 'チャットを終了する', "" %>
+      <%= link_to 'チャットを終了する', "#", method: :delete %>
     </div>
   </div>
 
@@ -15,32 +15,29 @@
     <%# each loop for every content on table by users %>
     <%# params val var erb for name, time, text %>
     <div class="chat-content">
-      <div class="name-time">
-        <p class="name">123456789#</p>
-        <p class="time">YYYY/MM/DD (Day) HH:MM:SS</p>
-      </div>
-      <p class="text">Sup</p>
-    </div>
-
-    <%# this is a shell (remove later) %>
-    <div class="chat-content">
-      <div class="name-time">
-        <p class="name">123456789#</p>
-        <p class="time">YYYY/MM/DD (Day) HH:MM:SS</p>
-      </div>
-      <p class="text">Feels Good Man</p>
+      <%# render this partial as many times as there are records gathered by the instance var (@messages) %>
+      <%# This is an easier method of doing the same thing as an each loop. %>
+      <%# Same as @messages.each do |message| %>
+      <%= render partial: 'message', collection: @messages%>
     </div>
   </div>
-
+  
   <div class="bottom-mc">
-    <div class="form">
-      <input class="text-form" placeholder= "type a message">
-      <label class="upload-image">
-        <span class="image">画像</span>
-        <input type="file" class="hidden">
-      </label>
-    </div>
-    <input class="submit-form" type="submit" value="送信">
+    <%= form_with model: [@room, @message], class: 'form', local: true do |f|%>
+      <%# <div class="form"> %>
+        <%# <input class="text-form" placeholder= "type a message"> %>
+        <%= f.text_field :content, class: "text-form", placeholder: "type a message" %>
+        <label class="upload-image">
+          <span class="image">画像</span>
+          <%# <input type="file" class="hidden"> %>
+          <%= f.file_field :image, class: "hidden" %>
+        </label>
+      <%# </div> %>
+      <div class= "submit-form">
+        <%= f.submit '送信' %>
+      </div>
+    <% end %>
+    <%# <input class="submit-form" type="submit" value="送信"> %>
   </div>
 
 </div>

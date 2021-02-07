@@ -17,6 +17,9 @@ class RoomsController < ApplicationController
     end
   end
 
+  def destroy
+  end
+
   private
   def room_params
     # user_ids is in array since it is sent as such.
