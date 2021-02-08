@@ -134,6 +134,7 @@
   height: calc(100% - 190px);
   width: 100%;
   background-color: #fafafa;
+  overflow: scroll;
 }
 
 .chat-content {

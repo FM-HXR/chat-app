@@ -24,6 +24,6 @@ class MessagesController < ApplicationController
   private
   def set_message_params
     # only needs to merge user_id: as current_user.id since :room_id's already suggested in URI pattern
-    params.require(:message).permit(:content).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :image).merge(user_id: current_user.id)
   end
 end
