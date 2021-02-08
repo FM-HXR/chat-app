@@ -23,6 +23,7 @@
   </div>
   
   <div class="bottom-mc">
+    <%# model: [@room, @message] = through @room, and then through @message %>
     <%= form_with model: [@room, @message], class: 'form', local: true do |f|%>
       <%# <div class="form"> %>
         <%# <input class="text-form" placeholder= "type a message"> %>
@@ -30,6 +31,7 @@
         <label class="upload-image">
           <span class="image">画像</span>
           <%# <input type="file" class="hidden"> %>
+          <%# :image = key for attachment as cited in messages model file %>
           <%= f.file_field :image, class: "hidden" %>
         </label>
       <%# </div> %>
